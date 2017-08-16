@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	
+	<ion-card *ngIf="provider.loggedin">
+	  <img src="{{provider.profilePicture}}"/>
+	  <ion-card-content>
+	    <ion-card-title>
+	      {{provider.name}}
+	    </ion-card-title>
+	    <p>
+	      {{provider.email}}
+	    </p>
+	  </ion-card-content>
+	</ion-card>
+
+	<button ion-button block (click)="logout()" *ngIf="provider.loggedin">Logout</button>
+
+</ion-content>

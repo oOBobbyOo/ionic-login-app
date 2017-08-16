@@ -1,0 +1,41 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Login</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+	<ion-list>
+	  <ion-item>
+	    <ion-label floating>Email</ion-label>
+	    <ion-input type="text" #email></ion-input>
+	  </ion-item>
+
+	  <ion-item>
+	    <ion-label floating>Password</ion-label>
+	    <ion-input type="password" #password></ion-input>
+	  </ion-item>
+	</ion-list>
+
+	<button ion-button block (click)="signIn()">Sign In</button>
+	<button ion-button block (click)="register()">Register</button>
+
+	<button ion-button block outline (click)="loginWithFacebook()" *ngIf="!provider.loggedin">
+		<ion-icon name="logo-facebook"></ion-icon>
+		Login With Facebook
+	</button>
+	<button ion-button block outline (click)="loginWithGoogle()" *ngIf="!provider.loggedin">
+		<ion-icon name="logo-google"></ion-icon>
+		Login With Google
+	</button>
+	<button ion-button block outline (click)="loginWithTwitter()" *ngIf="!provider.loggedin">
+		<ion-icon name="logo-twitter"></ion-icon>
+		Login With Twitter
+	</button>
+	<button ion-button block outline (click)="loginWithGithub()" *ngIf="!provider.loggedin">
+		<ion-icon ios="logo-github"></ion-icon>
+		Login With Github
+	</button>
+</ion-content>
