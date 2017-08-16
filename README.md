@@ -35,5 +35,5 @@ $ sudo npm install angularfire2 firebase --save
 
 ### `Demo`
 
-<img src="https://github.com/oOBobbyOo/ionic-login-app/blob/master/assets/demo.png" alt="ionic" />
+<img src="https://github.com/oOBobbyOo/ionic-login-app/blob/master/src/assets/demo.png" alt="ionic" />
 
